@@ -4,12 +4,13 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Authors>Daniel Moos</Authors>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="NUnit" Version="3.14.0" />
       <PackageReference Include="ServiceStack.Text" Version="6.5.1" />
       <PackageReference Include="SHA3.Net" Version="2.0.0" />
         <PackageReference Include="Websocket.Client" Version="4.4.43" />

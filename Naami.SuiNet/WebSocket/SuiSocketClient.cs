@@ -53,6 +53,16 @@ public class SuiSocketClient : IDisposable, ISuiSocketClient
 
         _websocketClient.Send(req.ToJson());
     }
+    
+    private void SubscribeToEvents()
+    {
+        _logger.LogInformation("Reconnected - subscribing to node");
+        
+        var req = new Request("sui_subscribeTransaction", Guid.NewGuid().ToString());
+        req.Params = new[] { "Any" };
+
+        _websocketClient.Send(req.ToJson());
+    }
 
     private void OnMessageReceived(ResponseMessage response)
     {
